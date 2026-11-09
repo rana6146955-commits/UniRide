@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102532">
+  <title>UniRide | University Transport</title>
+  <meta name="description" content="UniRide helps students discover university routes, reserve seats, receive service updates, and helps drivers and transport staff coordinate operations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+<script>window.setTimeout(function(){var i=document.getElementById('intro');if(i){i.classList.add('done');window.setTimeout(function(){i.style.display='none';},180);}},2700);</script>
+</head>
+<body>
+  <div class="intro" id="intro" aria-hidden="true">
+    <svg class="intro-dashes intro-dashes-a" viewBox="0 0 1200 800" preserveAspectRatio="none"><path d="M-120 585 C 140 430, 340 690, 585 535 C 805 395, 1010 460, 1320 310"/></svg>
+    <svg class="intro-dashes intro-dashes-c" viewBox="0 0 1200 800" preserveAspectRatio="none"><path d="M370 410 C370 245 505 165 625 190 C785 224 850 365 790 485 C725 615 535 630 430 535 C345 455 380 330 475 295 C575 258 690 310 702 404 C713 492 625 535 552 505 C490 480 485 410 535 382"/></svg>
+    <div class="intro-core">
+      <div class="intro-word" aria-label="UniRide"><span style="--i:0">U</span><span style="--i:1">n</span><span style="--i:2">i</span><span style="--i:3">R</span><span style="--i:4">i</span><span style="--i:5">d</span><span style="--i:6">e</span></div>
+    </div>
+  </div>
+
+  <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+  <div id="modalRoot"></div>
+
+  <!-- Public website -->
+  <main id="publicSite" class="public-site">
+    <header class="public-nav" id="publicNav">
+      <a href="#top" class="public-brand"><img src="assets/uniride-logo.png" alt="UniRide logo"><strong>UniRide</strong></a>
+      <nav class="public-links" aria-label="Public navigation">
+        <a href="#how">How it works</a><a href="#routesPreview">Routes</a><a href="#features">Features</a><a href="#aboutUniRide">About</a>
+      </nav>
+      <div class="public-actions"><button class="lang-toggle compact" type="button" data-lang-toggle>العربية</button><button class="ghost-btn public-signup" type="button" data-open-signup>Sign up</button><button class="primary-btn" type="button" data-open-auth>Log in</button></div>
+    </header>
+
+    <section class="public-hero" id="top">
+      <div class="hero-blob hero-blob-a" aria-hidden="true"></div><div class="hero-blob hero-blob-b" aria-hidden="true"></div>
+      <div class="public-hero-content reveal-on-scroll">
+        <span class="eyebrow light">University transport, made easier</span>
+        <h1>Know your route.<br>Reserve your seat.<br>Get there on time.</h1>
+        <p>UniRide brings students, drivers, and university transport teams into one clear system for routes, reservations, reminders, and day-to-day operations.</p>
+        <div class="public-hero-actions"><button class="primary-btn large" data-open-auth>Log in to UniRide</button><a class="ghost-btn light-btn" href="#routesPreview">Explore routes</a></div>
+      </div>
+      <div class="public-hero-media reveal-on-scroll">
+        <div class="hero-photo-card"><img src="assets/uniride-campus-bus.png" alt="University bus on campus"></div>
+        <div class="hero-media-tag"><strong>University Bus Service</strong><span>Routes, reservations and live updates</span></div>
+      </div>
+    </section>
+
+    <section class="public-section reveal-section" id="how">
+      <div class="public-wrap"><div class="public-section-head"><span class="eyebrow dark">How it works</span><h2>A simpler transport day for everyone.</h2><p>Students confirm seats, drivers know passenger counts, and transport staff can coordinate services without chasing information across different channels.</p></div>
+        <div class="public-feature-grid">
+          <article class="public-feature-card reveal-on-scroll"><span class="static-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h2a4 4 0 0 0 4-4v-4a4 4 0 0 1 4-4"/></svg></span><h3>Find the right route</h3><p>Browse university routes by governorate, university, city, or pickup area.</p></article>
+          <article class="public-feature-card reveal-on-scroll"><span class="static-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 11V6a3 3 0 0 1 6 0v5M5 11h12a2 2 0 0 1 2 2v5H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2Z"/><path d="M6 18v3M18 18v3"/></svg></span><h3>Reserve before you ride</h3><p>Confirm the service you plan to use so drivers receive a more accurate passenger count.</p></article>
+          <article class="public-feature-card reveal-on-scroll"><span class="static-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg></span><h3>Stay updated</h3><p>Receive reminders, announcements, delays, and service-status notifications in one place.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="public-section public-section-soft reveal-section" id="routesPreview">
+      <div class="public-wrap"><div class="public-section-head route-preview-head"><div><span class="eyebrow dark">Route network</span><h2>Explore before you sign in.</h2><p>Preview active university routes across Egypt. Sign in for your assigned route, reservation status, and notifications.</p></div><button class="primary-btn" data-open-auth>View my transport</button></div>
+        <div class="public-route-controls"><select id="publicRouteGov"><option value="">All governorates</option></select><input id="publicRouteSearch" placeholder="Search university, city or pickup area"></div>
+        <div class="public-route-grid" id="publicRouteGrid"></div>
+      </div>
+    </section>
+
+    <section class="public-section reveal-section" id="features"><div class="public-wrap"><div class="public-split"><div><span class="eyebrow dark">Built around real transport workflows</span><h2>Useful for students, drivers, and staff.</h2><p class="public-lead">Each role sees only the tools it needs, while actions stay connected across the system.</p></div><div class="public-role-list"><div><strong>Students</strong><span>Routes, seat reservations, notifications, profile, and support.</span></div><div><strong>Drivers</strong><span>Assigned services, passenger manifests, availability, and issue reporting.</span></div><div><strong>Transport staff</strong><span>Operations, capacity, announcements, support requests, reports, and exports.</span></div></div></div></div></section>
+
+    <section class="public-section public-cta reveal-section" id="aboutUniRide"><div class="public-wrap"><div class="cta-card"><img src="assets/uniride-logo.png" alt=""><div><h2>Ready to use UniRide?</h2><p>Sign in with your university transport account, or create a student account to get started.</p></div><div class="cta-actions"><button class="ghost-btn" data-open-signup>Sign up</button><button class="primary-btn" data-open-auth>Log in</button></div></div></div></section>
+    <footer class="public-footer" id="contact"><div class="public-wrap footer-grid">
+      <div class="footer-brand"><div class="footer-logo-row"><img src="assets/uniride-logo.png" alt="UniRide logo"><strong>UniRide</strong></div><p>Simple, connected university transport for students, drivers, and transport teams.</p></div>
+      <div><h4>Explore</h4><a href="#how">How it works</a><a href="#routesPreview">Routes</a><a href="#features">Features</a></div>
+      <div><h4>Get in touch</h4><a href="mailto:support@uniride.edu.eg">support@uniride.edu.eg</a><a href="tel:+201024587710">+20 10 2458 7710</a><span>Sun–Thu · 8:00–16:00</span></div>
+      <div><h4>Account</h4><button type="button" data-open-auth>Log in</button><button type="button" data-open-signup>Create account</button></div>
+      <div class="footer-bottom"><span>© 2026 UniRide</span><span>University transport management</span></div>
+    </div></footer>
+  </main>
+
+  <!-- Login -->
+  <main id="auth" class="auth-shell" hidden>
+    <section class="auth-visual" aria-label="UniRide university bus">
+      <div class="auth-photo" aria-hidden="true"></div><div class="auth-photo-overlay" aria-hidden="true"></div>
+      <button class="back-to-site" type="button" data-back-public><span data-icon="arrow-left"></span> Back</button>
+      <div class="auth-brand-row"><div class="auth-brand"><img src="assets/uniride-logo.png" alt="UniRide logo"><span>UniRide</span></div></div>
+      <div class="auth-copy"><span class="eyebrow light">University transport access</span><h1>Welcome back to UniRide.</h1><p>Access your routes, services, reservations, and transport updates in one place.</p></div>
+      <div class="auth-caption"><span>University Bus Service</span></div>
+    </section>
+    <section class="auth-panel">
+      <div class="auth-panel-top"><button class="lang-toggle" type="button" data-lang-toggle>العربية</button></div>
+      <div class="login-card">
+        <span class="eyebrow dark">Secure access</span><h2>Welcome back</h2><p class="muted login-helper">Use your student code, driver code, staff username, or administrator username.</p>
+        <form id="loginForm" novalidate>
+          <label for="loginId">Account ID</label><div class="field-wrap"><span data-icon="user"></span><input id="loginId" autocomplete="username" placeholder="e.g. 2022111102"></div>
+          <label for="password">Password</label><div class="field-wrap"><span data-icon="lock"></span><input id="password" type="password" autocomplete="current-password" placeholder="Password"><button class="field-eye" type="button" id="togglePassword" aria-label="Show password"><svg class="eye-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/><circle cx="12" cy="12" r="2.5"/></svg><svg class="eye-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 10.7a2 2 0 002.7 2.7"/><path d="M9.9 4.2A10.8 10.8 0 0112 4c5.4 0 9 5 9 5a15.6 15.6 0 01-3.1 3.5"/><path d="M6.2 6.2C4.1 7.7 3 9 3 9s3.6 5 9 5c1.5 0 2.8-.4 4-1"/></svg></button></div>
+          <div class="form-error" id="loginError" hidden></div><button class="primary-btn wide" type="submit"><span>Sign in</span><span data-icon="arrow-right"></span></button>
+        </form>
+        <div class="account-access" id="accountAccess">
+          <div class="account-access-head"><strong>Choose an account</strong><span>Select an account to fill the sign-in fields</span></div>
+          <div class="account-access-grid" id="accountAccessGrid">
+            <button class="account-card" type="button" data-account-login="2022111102"><span class="account-card-copy"><strong>Farah Salah Adham</strong><small>Student · 2022111102</small></span></button>
+            <button class="account-card" type="button" data-account-login="2022143841"><span class="account-card-copy"><strong>Amira Adam Gamal</strong><small>Student · 2022143841</small></span></button>
+            <button class="account-card" type="button" data-account-login="UR-Z01-7152"><span class="account-card-copy"><strong>Abdel Nasser Hamdy Abdel Malak</strong><small>Driver · UR-Z01-7152</small></span></button>
+            <button class="account-card" type="button" data-account-login="UR-Z01-8835"><span class="account-card-copy"><strong>Adel Rami Abdallah</strong><small>Driver · UR-Z01-8835</small></span></button>
+            <button class="account-card" type="button" data-account-login="staff"><span class="account-card-copy"><strong>Heba Fouad</strong><small>Transport Staff · staff</small></span></button>
+            <button class="account-card" type="button" data-account-login="admin"><span class="account-card-copy"><strong>System Administrator</strong><small>Administrator · admin</small></span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Application -->
+  <div id="app" class="app-shell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <button class="sidebar-brand" data-nav="home" aria-label="Go to dashboard"><img class="sidebar-logo" src="assets/uniride-logo.png" alt=""><span>UniRide</span></button>
+      <div class="sidebar-user" id="sidebarUser"></div><nav class="sidebar-nav" id="sidebarNav" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom"><button class="nav-item" data-nav="profile"><span class="nav-icon" data-icon="user-circle"></span><span>Profile</span></button><button class="nav-item danger-soft" id="logoutBtn"><span class="nav-icon" data-icon="logout"></span><span>Sign out</span></button></div>
+    </aside>
+    <section class="workspace"><header class="topbar"><div class="topbar-title"><button class="icon-button menu-btn" id="menuBtn" aria-label="Open menu"><span data-icon="menu"></span></button><div><span class="eyebrow dark" id="pageKicker">Overview</span><h2 id="pageTitle">Dashboard</h2></div></div><div class="topbar-actions"><button class="lang-toggle compact" type="button" data-lang-toggle>العربية</button><button class="icon-button notification-button" id="notificationBtn" data-nav="notifications" aria-label="Notifications"><span data-icon="bell"></span><span class="notification-dot" id="notificationDot" hidden></span></button><button class="profile-chip" id="profileChip" data-nav="profile"><span class="avatar" id="topAvatar"></span><span class="profile-chip-copy"><strong id="topName"></strong><small id="topRole"></small></span><span data-icon="chevron-down"></span></button></div></header><div class="content" id="view"></div></section>
+  </div>
+
+  <script src="data.js"></script><script src="script.js"></script>
+<script>
+(function(){
+  const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
+  const D=window.UNIRIDE_DATA||{routes:[]};
+  const dict={
+    'How it works':'كيف يعمل','Routes':'المسارات','Features':'المميزات','About':'عن UniRide','Sign up':'إنشاء حساب','Log in':'تسجيل الدخول','University transport, made easier':'نقل جامعي أبسط وأسهل','Know your route.':'اعرف مسارك.','Reserve your seat.':'احجز مقعدك.','Get there on time.':'وصل في موعدك.','UniRide brings students, drivers, and university transport teams into one clear system for routes, reservations, reminders, and day-to-day operations.':'يجمع UniRide الطلاب والسائقين وفرق النقل الجامعي في نظام واحد واضح للمسارات والحجوزات والتنبيهات وإدارة التشغيل اليومي.','Log in to UniRide':'تسجيل الدخول إلى UniRide','Explore routes':'استكشف المسارات','University Bus Service':'خدمة النقل الجامعي','Routes, reservations and live updates':'المسارات والحجوزات والتحديثات في مكان واحد','A simpler transport day for everyone.':'يوم نقل أسهل للجميع.','Students confirm seats, drivers know passenger counts, and transport staff can coordinate services without chasing information across different channels.':'يؤكد الطلاب مقاعدهم، ويعرف السائقون عدد الركاب، ويتمكن موظفو النقل من تنسيق الخدمات من مكان واحد.','Find the right route':'اعثر على المسار المناسب','Browse university routes by governorate, university, city, or pickup area.':'تصفح مسارات الجامعات حسب المحافظة أو الجامعة أو المدينة أو منطقة الالتقاط.','Reserve before you ride':'احجز قبل الرحلة','Confirm the service you plan to use so drivers receive a more accurate passenger count.':'أكد الرحلة التي ستستخدمها ليصل للسائق عدد ركاب أدق.','Stay updated':'ابقَ على اطلاع','Receive reminders, announcements, delays, and service-status notifications in one place.':'استلم التذكيرات والإعلانات والتأخيرات وتحديثات حالة الخدمة في مكان واحد.','Route network':'شبكة المسارات','Explore before you sign in.':'استكشف قبل تسجيل الدخول.','Preview active university routes across Egypt. Sign in for your assigned route, reservation status, and notifications.':'عاين مسارات الجامعات النشطة في مصر، ثم سجل الدخول لرؤية مسارك وحجزك وإشعاراتك.','View my transport':'عرض نقلي الجامعي','All governorates':'كل المحافظات','Search university, city or pickup area':'ابحث بالجامعة أو المدينة أو منطقة الالتقاط','Built around real transport workflows':'مصمم لاحتياجات النقل الحقيقية','Useful for students, drivers, and staff.':'مفيد للطلاب والسائقين وموظفي النقل.','Each role sees only the tools it needs, while actions stay connected across the system.':'يرى كل مستخدم الأدوات التي يحتاجها فقط، بينما تبقى العمليات مترابطة داخل النظام.','Students':'الطلاب','Drivers':'السائقون','Transport staff':'موظفو النقل','Routes, seat reservations, notifications, profile, and support.':'المسارات وحجز المقاعد والإشعارات والملف الشخصي والدعم.','Assigned services, passenger manifests, availability, and issue reporting.':'الخدمات المسندة وقوائم الركاب والتوفر والإبلاغ عن المشكلات.','Operations, capacity, announcements, support requests, reports, and exports.':'التشغيل والسعة والإعلانات وطلبات الدعم والتقارير والتصدير.','Ready to use UniRide?':'جاهز لاستخدام UniRide؟','Sign in with your university transport account, or create a student account to get started.':'سجل الدخول بحساب النقل الجامعي أو أنشئ حساب طالب للبدء.','Create account':'إنشاء حساب','Explore':'استكشف','Get in touch':'تواصل معنا','Account':'الحساب','Simple, connected university transport for students, drivers, and transport teams.':'نقل جامعي بسيط ومترابط للطلاب والسائقين وفرق النقل.','University transport management':'إدارة النقل الجامعي','Sun–Thu · 8:00–16:00':'الأحد–الخميس · 8:00–16:00','Welcome back':'مرحبًا بعودتك','Secure access':'دخول آمن','Account ID':'معرّف الحساب','Password':'كلمة المرور','Sign in':'تسجيل الدخول','Back':'رجوع'
+  };
+  const storeLang=()=>{try{return JSON.parse(localStorage.getItem('ur4_lang')||'"en"')}catch{return 'en'}};
+  let lang=storeLang()==='ar'?'ar':'en';
+  function applyStaticLanguage(){
+    document.documentElement.lang=lang; document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+    $$('[data-lang-toggle]').forEach(b=>b.textContent=lang==='ar'?'English':'العربية');
+    [$('#publicSite'),$('#auth')].filter(Boolean).forEach(root=>{
+      const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){if(['SCRIPT','STYLE'].includes(n.parentElement?.tagName))continue;if(n.__pubOrig===undefined)n.__pubOrig=n.nodeValue;const key=n.__pubOrig.trim();if(key&&dict[key])n.nodeValue=lang==='ar'?n.__pubOrig.replace(key,dict[key]):n.__pubOrig;}
+    });
+    const q=$('#publicRouteSearch');if(q){if(q.__pubPH===undefined)q.__pubPH=q.placeholder;q.placeholder=lang==='ar'?dict['Search university, city or pickup area']:q.__pubPH;}
+    renderRoutes();
+  }
+  function renderRoutes(){
+    const grid=$('#publicRouteGrid');if(!grid||!D.routes)return;const gov=$('#publicRouteGov')?.value||'';const q=($('#publicRouteSearch')?.value||'').trim().toLowerCase();let list=D.routes.filter(r=>r.s==='Active');if(gov)list=list.filter(r=>r.startGov===gov);if(q)list=list.filter(r=>[r.n,r.nEn,r.uni,r.uniEn,r.startGov,r.startGovEn,r.startCity,r.startCityEn,r.startDistrict,r.startDistrictEn].some(v=>String(v||'').toLowerCase().includes(q)));list=list.slice(0,6);
+    const arrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M14 7l5 5-5 5"/></svg>';
+    const clock='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+    const route='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h2a4 4 0 0 0 4-4v-4a4 4 0 0 1 4-4"/></svg>';
+    grid.innerHTML=list.map(r=>`<article class="public-route-card"><div><span class="route-id">${r.id}</span><h3>${lang==='ar'?(r.n||''):(r.nEn||r.n||'')}</h3><p>${lang==='ar'?(r.startGov||''):(r.startGovEn||r.startGov||'')} · ${lang==='ar'?(r.uni||''):(r.uniEn||r.uni||'')}</p></div><div class="public-route-meta"><span>${clock}${Math.round(r.min||0)} ${lang==='ar'?'دقيقة':'min'}</span><span>${route}${r.km||0} km</span></div><button class="text-btn public-login-fallback" type="button">${lang==='ar'?'تسجيل الدخول':'Log in'} ${arrow}</button></article>`).join('')||`<div class="public-route-empty">${lang==='ar'?'لا توجد مسارات':'No routes found'}</div>`;
+    $$('.public-login-fallback',grid).forEach(b=>b.onclick=openAuthFallback);
+  }
+  function openAuthFallback(){if(window.UniRidePublic?.openAuth)return window.UniRidePublic.openAuth();const p=$('#publicSite'),a=$('#auth'),app=$('#app');if(p)p.hidden=true;if(a)a.hidden=false;if(app)app.hidden=true;setTimeout(()=>$('#loginId')?.focus(),60)}
+  function openSignupFallback(){if(window.UniRidePublic?.openSignup)return window.UniRidePublic.openSignup();openAuthFallback();}
+  function wire(){
+    const gov=$('#publicRouteGov');if(gov&&D.routes){const selected=gov.value;const gs=[...new Set(D.routes.map(r=>r.startGov).filter(Boolean))].sort();gov.innerHTML=`<option value="">${lang==='ar'?'كل المحافظات':'All governorates'}</option>`+gs.map(g=>{const r=D.routes.find(x=>x.startGov===g);return `<option value="${g}">${lang==='ar'?g:(r?.startGovEn||g)}</option>`}).join('');gov.value=selected;gov.onchange=renderRoutes;}const q=$('#publicRouteSearch');if(q)q.oninput=renderRoutes;
+    $$('[data-open-auth]').forEach(b=>b.onclick=openAuthFallback);$$('[data-open-signup]').forEach(b=>b.onclick=openSignupFallback);$$('[data-back-public]').forEach(b=>b.onclick=function(){if(window.UniRidePublic?.showPublic)return window.UniRidePublic.showPublic();const p=$('#publicSite'),a=$('#auth'),app=$('#app');if(p)p.hidden=false;if(a)a.hidden=true;if(app)app.hidden=true;window.scrollTo({top:0,behavior:'smooth'});});
+    $$('[data-lang-toggle]').forEach(b=>b.addEventListener('click',function(e){if(!$('#publicSite')?.hidden||!$('#auth')?.hidden){e.preventDefault();e.stopImmediatePropagation();if(window.UniRidePublic?.toggleLanguage){window.UniRidePublic.toggleLanguage();lang=storeLang()==='ar'?'ar':'en';}else{lang=lang==='en'?'ar':'en';localStorage.setItem('ur4_lang',JSON.stringify(lang));}applyStaticLanguage();wire();}},true));
+    const sections=$$('#publicSite section[id]');const navLinks=$$('.public-links a');if('IntersectionObserver'in window){const active=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+en.target.id));}})},{rootMargin:'-38% 0px -50% 0px',threshold:0});sections.forEach(x=>active.observe(x));const reveal=new IntersectionObserver(es=>es.forEach(en=>en.target.classList.toggle('is-visible',en.isIntersecting)),{threshold:.12,rootMargin:'0px 0px -8% 0px'});$$('.reveal-section,.reveal-on-scroll').forEach(x=>reveal.observe(x));}else{$$('.reveal-section,.reveal-on-scroll').forEach(x=>x.classList.add('is-visible'));}
+  }
+  function init(){applyStaticLanguage();wire();requestAnimationFrame(()=>$$('.public-hero .reveal-on-scroll').forEach(x=>x.classList.add('is-visible')));}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>
